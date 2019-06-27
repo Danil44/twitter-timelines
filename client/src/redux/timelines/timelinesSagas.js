@@ -3,7 +3,7 @@ import moment from 'moment';
 import { getUserTimeline } from './timelinesApi';
 import { getTimelinesSuccess, getTimelinesError } from './timelinesActions';
 
-const timeLinesMapper = data =>
+const timelinesMapper = data =>
   data.map(
     ({
       id,
@@ -30,7 +30,7 @@ function* getTimeline({ payload: { username } }) {
   yield delay(500);
   try {
     const data = yield call(getUserTimeline, username);
-    yield put(getTimelinesSuccess(timeLinesMapper(data)));
+    yield put(getTimelinesSuccess(timelinesMapper(data)));
   } catch (err) {
     yield put(getTimelinesError(err));
   }
