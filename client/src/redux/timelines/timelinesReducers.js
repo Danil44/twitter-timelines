@@ -11,6 +11,17 @@ const timelinesReducer = (state = [], { type, payload }) => {
   }
 };
 
+const searchReducer = (state = '', { type, payload }) => {
+  switch (type) {
+    case Type.GET_TIMELINES_START:
+      return payload.username;
+
+    default:
+      return state;
+  }
+};
+
 export default combineReducers({
+  searchQuery: searchReducer,
   timelines: timelinesReducer,
 });

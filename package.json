@@ -3,18 +3,25 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start": "nodemon app.js",
-    "debug": "nodemon --inspect ./bin/www"
+    "start": "node app.js",
+    "server": "nodemon app.js",
+    "client": "yarn start --prefix client",
+    "debug": "nodemon --inspect ./bin/www",
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false yarn add --prefix client && yarn run build --prefix client"
   },
   "dependencies": {
     "cookie-parser": "~1.4.4",
     "cors": "^2.8.5",
     "debug": "~2.6.9",
+    "dotenv": "^8.0.0",
     "express": "~4.16.1",
     "http-errors": "^1.6.3",
     "jade": "~1.11.0",
     "morgan": "~1.9.1",
+    "oauth": "^0.9.15",
     "redux-logger": "^3.0.6",
-    "request": "^2.88.0"
+    "request": "^2.88.0",
+    "twitter": "^1.7.1"
   }
 }

@@ -6,7 +6,7 @@ import timelinesReducers from './timelines/timelinesReducers';
 import timelinesSagas from './timelines/timelinesSagas';
 
 const rootReducer = combineReducers({
-  userTimeline: timelinesReducers,
+  userTimelines: timelinesReducers,
 });
 
 const sagaMiddleware = createSagaMiddleware();

@@ -1,36 +1,56 @@
-import React, { Component } from 'react';
+import React, { useState } from 'react';
 import PropTypes from 'prop-types';
+import { AppBar, Toolbar, InputBase } from '@material-ui/core';
+import SearchIcon from '@material-ui/icons/Search';
+import useStyles from './TimelinesSearchStyles';
 
-export default class TimelinesSearch extends Component {
-  state = { username: '' };
+export default function TimelinesSearch({ onSubmit }) {
+  const classes = useStyles();
+  const [search, setInput] = useState({ username: '' });
 
-  static propTypes = {
-    onSubmit: PropTypes.func.isRequired,
+  const handleChange = name => ({ target }) => {
+    const { value } = target;
+
+    setInput({ [name]: value });
   };
 
-  handleChange = ({ target }) => {
-    const { value, name } = target;
-
-    this.setState({ [name]: value });
-  };
-
-  handleSubmit = evt => {
+  const handleSubmit = evt => {
     evt.preventDefault();
 
-    const { onSubmit } = this.props;
-    const { username } = this.state;
+    onSubmit(search.username);
 
-    onSubmit(username);
-
-    this.setState({ username: '' });
+    setInput({ username: '' });
   };
 
-  render() {
-    const { username } = this.state;
-    return (
-      <form onSubmit={this.handleSubmit}>
-        <input name="username" onChange={this.handleChange} value={username} />
-      </form>
-    );
-  }
+  return (
+    <AppBar position="static" className={classes.bar}>
+      <Toolbar>
+        <form
+          className={classes.search}
+          data-test="TimelinesSearchComponent"
+          onSubmit={handleSubmit}
+        >
+          <div className={classes.searchIcon}>
+            <SearchIcon />
+          </div>
+          <InputBase
+            name="username"
+            onChange={handleChange('username')}
+            value={search.username}
+            margin="none"
+            placeholder="Search…"
+            classes={{
+              root: classes.inputRoot,
+              input: classes.inputInput,
+            }}
+            inputProps={{ 'aria-label': 'Search' }}
+          />
+        </form>
+      </Toolbar>
+    </AppBar>
+  );
 }
+
+TimelinesSearch.propTypes = {
+  onSubmit: PropTypes.func.isRequired,
+};
