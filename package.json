@@ -11,7 +11,7 @@
     "client": "npm start --prefix client",
     "debug": "nodemon --inspect ./bin/www",
     "dev": "concurrently \"npm run server\" \"npm run client\"",
-    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build --prefix client"
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix client && yarn run build --prefix client"
   },
   "dependencies": {
     "cookie-parser": "~1.4.4",
