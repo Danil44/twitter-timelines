@@ -12,8 +12,10 @@
     "server": "nodemon app.js",
     "test": "mocha || true",
     "client": "cd client && yarn start",
+    "client-tests": "cd client && yarn test",
     "debug": "nodemon --inspect ./bin/www",
     "dev": "concurrently \"yarn run server\" \"yarn run client\"",
+    "all-tests": "concurrently \"yarn test\" \"yarn run client-tests\"",
     "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false cd client && yarn install && yarn run build --prefix client"
   },
   "dependencies": {
