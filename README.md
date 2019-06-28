@@ -2,7 +2,7 @@
 `git clone https://github.com/Danil44/twitter-timelines.git`
 
 ### Install [concurrently](https://github.com/kimmobrunfeldt/concurrently#readme) module for running client and server sides at the same time:
-`npm i -g concurrently"
+`npm i -g concurrently`
 
 ### Install dependencies: 
 `yarn run install`
