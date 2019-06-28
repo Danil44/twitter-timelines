@@ -1,0 +1,72 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<TimelinesItem/> component should renders without crashing given the required props 1`] = `
+<WithStyles(ForwardRef(Card))
+  className="makeStyles-card-1"
+>
+  <WithStyles(ForwardRef(CardHeader))
+    avatar={
+      <ForwardRef(WithStyles)
+        aria-label="name"
+        src="image url"
+      />
+    }
+    subheader="@name . date"
+    subheaderTypographyProps={
+      Object {
+        "display": "inline",
+      }
+    }
+    title="name"
+    titleTypographyProps={
+      Object {
+        "className": "makeStyles-name-2",
+        "display": "inline",
+        "variant": "h6",
+      }
+    }
+  />
+  <WithStyles(ForwardRef(CardContent))>
+    <WithStyles(ForwardRef(Typography))
+      variant="body1"
+    >
+      text
+    </WithStyles(ForwardRef(Typography))>
+    <TimelinesQuotedTweet
+      created_at="date"
+      text="text"
+      user={
+        Object {
+          "name": "name",
+          "profile_image_url": "profile image url",
+          "screen_name": "screen name",
+        }
+      }
+    />
+  </WithStyles(ForwardRef(CardContent))>
+  <div
+    className="makeStyles-iconContainer-3"
+  >
+    <FavoriteIcon
+      className="makeStyles-likeIcon-4"
+      stroke="grey"
+      strokeWidth={2}
+    />
+    <WithStyles(ForwardRef(Typography))
+      className="makeStyles-count-6"
+      variant="body2"
+    >
+      0
+    </WithStyles(ForwardRef(Typography))>
+    <ShareIcon
+      className="makeStyles-icon-5"
+    />
+    <WithStyles(ForwardRef(Typography))
+      className="makeStyles-count-6"
+      variant="body2"
+    >
+      0
+    </WithStyles(ForwardRef(Typography))>
+  </div>
+</WithStyles(ForwardRef(Card))>
+`;

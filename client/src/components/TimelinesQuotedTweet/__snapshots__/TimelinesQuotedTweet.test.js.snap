@@ -1,0 +1,36 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<TimelinesQuotedTweet/> component should renders without crashing given the required props 1`] = `
+<WithStyles(ForwardRef(Card))
+  className="makeStyles-card-1"
+>
+  <WithStyles(ForwardRef(CardHeader))
+    avatar={
+      <ForwardRef(WithStyles)
+        aria-label="name"
+        src="profile image url"
+      />
+    }
+    subheader="@screen name . Invalid date"
+    subheaderTypographyProps={
+      Object {
+        "display": "inline",
+      }
+    }
+    title="name"
+    titleTypographyProps={
+      Object {
+        "className": "makeStyles-name-2",
+        "display": "inline",
+      }
+    }
+  />
+  <WithStyles(ForwardRef(CardContent))>
+    <WithStyles(ForwardRef(Typography))
+      variant="body1"
+    >
+      text
+    </WithStyles(ForwardRef(Typography))>
+  </WithStyles(ForwardRef(CardContent))>
+</WithStyles(ForwardRef(Card))>
+`;

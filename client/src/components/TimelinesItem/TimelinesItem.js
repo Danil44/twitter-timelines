@@ -60,6 +60,10 @@ const TimelinesItem = ({
   );
 };
 
+TimelinesItem.defaultProps = {
+  quotedTweet: null,
+};
+
 TimelinesItem.propTypes = {
   text: PropTypes.string.isRequired,
   name: PropTypes.string.isRequired,
@@ -68,10 +72,7 @@ TimelinesItem.propTypes = {
   likes: PropTypes.number.isRequired,
   retweets: PropTypes.number.isRequired,
   createdAt: PropTypes.string.isRequired,
-  quotedTweet: PropTypes.shape({
-    created_at: PropTypes.string.isRequired,
-    name: PropTypes.string.isRequired,
-  }).isRequired,
+  quotedTweet: PropTypes.shape({}),
 };
 
 export default TimelinesItem;

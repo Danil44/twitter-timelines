@@ -17,7 +17,9 @@ const timelinesMapper = data =>
       id,
       text,
       name,
-      createdAt: moment(createdAt).format('LL'),
+      createdAt: moment(createdAt, 'dd MMM DD HH:mm:ss ZZ YYYY', 'en').format(
+        'LL',
+      ),
       screenName,
       profileImage,
       retweets,

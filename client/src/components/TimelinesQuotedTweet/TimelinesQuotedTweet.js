@@ -12,7 +12,11 @@ import useStyles from './TimelinesQuotedTweetStyle';
 
 const TimelinesQuotedTweet = ({ user, created_at: createdAt, text }) => {
   const classes = useStyles();
-  const formatedTime = moment(createdAt).format('LL');
+  const formatedTime = moment(
+    createdAt,
+    'dd MMM DD HH:mm:ss ZZ YYYY',
+    'en',
+  ).format('LL');
   return (
     <Card className={classes.card}>
       <CardHeader
