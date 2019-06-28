@@ -10,6 +10,7 @@
     "client-install": "yarn install --prefix client",
     "start": "node app.js",
     "server": "nodemon app.js",
+    "test": "mocha || true",
     "client": "cd client && yarn start",
     "debug": "nodemon --inspect ./bin/www",
     "dev": "concurrently \"yarn run server\" \"yarn run client\"",
@@ -30,5 +31,10 @@
     "request": "^2.88.0",
     "twitter": "^1.7.1",
     "yarn": "^1.16.0"
+  },
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "chai-http": "^4.3.0",
+    "mocha": "^6.1.4"
   }
 }
