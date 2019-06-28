@@ -2,7 +2,7 @@
 `git clone https://github.com/Danil44/twitter-timelines.git`
 
 ### Install dependencies: 
-`yarn install`
+`yarn run install`
 
 ### To run an app run:
 `yarn run dev`
