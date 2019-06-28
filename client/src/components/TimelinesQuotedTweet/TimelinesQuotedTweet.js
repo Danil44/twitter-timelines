@@ -16,9 +16,7 @@ const TimelinesQuotedTweet = ({ user, created_at: createdAt, text }) => {
   return (
     <Card className={classes.card}>
       <CardHeader
-        avatar={
-          <Avatar aria-label={user.name} src={user.profile_image_url}></Avatar>
-        }
+        avatar={<Avatar aria-label={user.name} src={user.profile_image_url} />}
         title={user.name}
         titleTypographyProps={{
           display: 'inline',
@@ -26,7 +24,7 @@ const TimelinesQuotedTweet = ({ user, created_at: createdAt, text }) => {
         }}
         subheaderTypographyProps={{ display: 'inline' }}
         subheader={`@${user.screen_name} . ${formatedTime}`}
-      ></CardHeader>
+      />
       <CardContent>
         <Typography variant="body1">{text}</Typography>
       </CardContent>

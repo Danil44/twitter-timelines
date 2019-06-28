@@ -27,7 +27,7 @@ const TimelinesItem = ({
   return (
     <Card className={classes.card}>
       <CardHeader
-        avatar={<Avatar aria-label={name} src={profileImage}></Avatar>}
+        avatar={<Avatar aria-label={name} src={profileImage} />}
         title={name}
         titleTypographyProps={{
           variant: 'h6',
@@ -36,7 +36,7 @@ const TimelinesItem = ({
         }}
         subheaderTypographyProps={{ display: 'inline' }}
         subheader={`@${screenName} . ${createdAt}`}
-      ></CardHeader>
+      />
       <CardContent>
         <Typography variant="body1">{text}</Typography>
 
