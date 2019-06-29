@@ -14,7 +14,7 @@ or
 ### To run all tests run:
 `yarn run all-tests`
 or
-`npm run all-tests
+`npm run all-tests`
 
 ### To deploy an app run:
 `git push heroku master`
