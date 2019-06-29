@@ -13,8 +13,8 @@
     "debug": "nodemon --inspect ./bin/www",
     "client": "cd client && yarn start",
     "client-tests": "cd client && yarn test",
-    "client-install": "yarn install --prefix client",
-    "install": "concurrently \"yarn install\" \"yarn run client-install\"",
+    "client-install": "cd client && yarn install",
+    "install": "yarn install && yurn run client-install",
     "dev": "concurrently \"yarn run server\" \"yarn run client\"",
     "all-tests": "concurrently \"yarn test\" \"yarn run client-tests\"",
     "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false cd client && yarn install && yarn run build --prefix client"
