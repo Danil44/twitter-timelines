@@ -17,11 +17,18 @@ describe('<TimelinesSearch/>', () => {
 
   it('should renders without crashing given the required props', () => {
     expect(toJson(wrapper)).toMatchSnapshot();
+    expect(wrapper.find('input')).toHaveLength(1);
   });
 
-  it('should call handleSubmit method which calls onSubmit prop', () => {
-    wrapper.instance().handleSubmit();
+  it('should change input value and call onSubmit which is calls history.replace', () => {
+    const input = wrapper.find('input');
+    input.instance().value = 'username';
+    input.simulate('change');
 
+    expect(wrapper.state().username).toEqual('username');
+
+    wrapper.instance().handleSubmit();
     expect(props.onSubmit.mock.calls.length).toBe(1);
+    expect(props.history.replace.mock.calls.length).toBe(1);
   });
 });

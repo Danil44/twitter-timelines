@@ -62,6 +62,10 @@
     "predeploy": "yarn run build",
     "deploy": "gh-pages -d build"
   },
+  "jest": {
+    "verbose": false,
+    "testURL": "http://localhost"
+  },
   "proxy": "http://localhost:3001",
   "eslintConfig": {
     "extends": "react-app"
