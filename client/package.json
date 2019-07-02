@@ -63,8 +63,7 @@
     "deploy": "gh-pages -d build"
   },
   "jest": {
-    "verbose": false,
-    "testURL": "http://localhost"
+    "verbose": false
   },
   "proxy": "http://localhost:3001",
   "eslintConfig": {
