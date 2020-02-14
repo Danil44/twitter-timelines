@@ -48,7 +48,7 @@
     "timeago.js": "^4.0.0-beta.2",
     "tv4": "^1.3.0",
     "typeface-roboto": "0.0.54",
-    "yarn": "^1.16.0"
+    "yarn": "^1.22.0"
   },
   "scripts": {
     "start": "react-scripts start",
