@@ -8,7 +8,7 @@
   },
   "scripts": {
     "start": "node app.js",
-    "server": "nodemon app.js",
+    "server": "nodemon ./server/app.js",
     "test": "mocha || true",
     "debug": "nodemon --inspect ./bin/www",
     "client": "cd client && yarn start",
@@ -29,6 +29,7 @@
     "http-errors": "^1.6.3",
     "jade": "~1.11.0",
     "morgan": "~1.9.1",
+    "nodemon": "^2.0.13",
     "oauth": "^0.9.15",
     "redux-logger": "^3.0.6",
     "request": "^2.88.0",
